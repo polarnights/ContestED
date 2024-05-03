@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ContestED - Educational platform for testing your problems!</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <header id="header">
+
+
+    </header>
+
+
+    <footer id="contactus">
+
+        <div class="footer-top">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <div class="footer-info">
+
+                                    <h3>TODO-1</h3>
+
+                                    <p>TODO-2</p>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <div class="footer-links">
+
+                                    <h4>Useful Links</h4>
+
+                                    <ul>
+
+                                        <li><a href="#whatwedo">What We Do</a></li>
+
+                                        <li><a href="#whychooseus">Why Choose Us</a></li>
+
+                                        <li><a href="#pricinghead">Pricing </a></li>
+
+                                        <li><a href="#">Terms of service</a></li>
+
+                                        <li><a href="#">Privacy policy</a></li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="footer-links">
+
+                                    <h4>Contact Us</h4>
+
+                                    <p>
+
+
+                                        <strong>Skype:</strong> Bedrosova<br>
+
+                                        <strong>Email:</strong> BedrosovaYulia@gmail.com<br>
+
+                                    </p>
+
+                                </div>
+
+                                <div class="social-links">
+
+                                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+                                    <!-- <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>-->
+
+                                    <!--<a href="#" class="instagram"><i class="fab fa-instagram"></i></a> -->
+
+                                    <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6" id="footercontformid">
+
+                        <div class="form">
+
+                            <h4>Send us a message</h4>
+
+                            <div id="thxmsg">
+
+                                <p>Thank you for contacting. Our team will get in touch with you soon.</p>
+
+                                <script>
+
+                                    var y = document.getElementById("thxmsg");
+
+                                    y.style.display = "none";
+
+                                </script>
+
+                            </div>
+
+                            <!--<p>Type your message here</p>-->
+
+                            <form name="contactform" class="contactForm" action="php/email_form.php?do=send"
+                                method="post" role="form" id="contactFormAP">
+
+                                <div class="form-group">
+
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" />
+
+                                    <div class="validation"></div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Email" />
+
+                                    <div class="validation"></div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" name="contactnumber" id="contactnumber"
+                                        placeholder="Contact Number" />
+
+                                    <div class="validation"></div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" name="subject" id="subject"
+                                        placeholder="Subject" />
+
+                                    <div class="validation"></div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                        id="messagetext"></textarea>
+
+                                    <div class="validation"></div>
+
+                                </div>
+
+                                <div class="text-center">
+
+                                    <input ame="submitcf" type="submit" value="Send Message" id="submitbtn" />
+
+                                </div>
+
+                                <script>
+
+                                    function validateEmail(email) {
+
+                                        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                                        return re.test(email);
+
+                                    }
+
+
+
+                                    $(function () {
+
+                                        $('#contactFormAP').on('submit', function (e) {
+
+                                            e.preventDefault();
+
+
+
+                                            /* ---- Form Validation */
+
+                                            var name = document.forms["contactform"]["name"];
+
+                                            var email = document.forms["contactform"]["email"];
+
+                                            var contactnumber = document.forms["contactform"]["contactnumber"];
+
+                                            var subject = document.forms["contactform"]["subject"];
+
+                                            var message = document.forms["contactform"]["message"];
+
+
+
+                                            if (name.value == "") {
+
+                                                window.alert("Please enter your name.");
+
+                                                name.focus();
+
+                                                //e.preventDefault();
+
+                                                return false;
+
+                                            }
+
+
+
+                                            if (validateEmail(email.value)) { } else {
+
+                                                window.alert("Please enter a valid e-mail address.");
+
+                                                email.focus();
+
+                                                //e.preventDefault();
+
+                                                return false;
+
+                                            }
+
+                                            if (contactnumber.value == "") {
+
+                                                window.alert("Please enter your contact number.");
+
+                                                contactnumber.focus();
+
+                                                //e.preventDefault();
+
+                                                return false;
+
+                                            }
+
+
+
+                                            if (subject.value == "") {
+
+                                                window.alert("Please enter the subject.");
+
+                                                subject.focus();
+
+                                                //e.preventDefault();
+
+                                                return false;
+
+                                            }
+
+
+
+                                            if (message.value == "") {
+
+                                                window.alert("Please enter a message.");
+
+                                                message.focus();
+
+                                                //e.preventDefault();
+
+                                                return false;
+
+                                            }
+
+
+
+                                            /* ---Form Validation ends */
+
+
+
+                                            $.ajax({
+
+                                                type: 'get',
+
+                                                url: 'https://functions.yandexcloud.net/d4elk3gp1avbuf8hu1pc',
+
+                                                data: $('.contactForm').serialize(),
+
+                                                complete: function () {
+
+
+
+                                                    var x = document.getElementById("contactFormAP");
+
+                                                    x.style.display = "none";
+
+                                                    var y = document.getElementById("thxmsg");
+
+                                                    y.style.display = "block";
+
+                                                    // $('#name').val('');
+
+                                                    //$('#email').val('');
+
+                                                    //$('#contactnumber').val('');
+
+                                                    //$('#subject').val('');
+
+                                                    //$('#messagetext').val('');
+
+                                                }
+
+                                            });
+
+
+
+                                        });
+
+                                    });
+
+                                </script>
+
+                                <!--  <input id="submitbtn" onclick="submitForm()" type="submit" value="Send Message" />-->
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="copyright">
+
+                &copy; Copyright <strong>Bedrosova & Co</strong>. All Rights Reserved.
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    </div>
+
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="lib/easing/easing.min.js"></script>
+
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+
+    <script src="lib/wow/wow.min.js"></script>
+
+    <script src="lib/waypoints/waypoints.min.js"></script>
+
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="contactform/contactform.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/animation.js"></script>
+
+    <script src="js/owlcarousel/owl.carousel.min.js"></script>
+
+</body>
+
+
+
+</html>
+
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ContestED - Educational platform for testing your problems!</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+
+</head>
+
+<body class="{{mode}}">
+    <h1>Select your problem</h1>
+    <div>Add a new todo item:
+        <form action="{{ url_for('add') }}" method="POST">
+            <input type="text" name="src_url">
+            <input type="submit" value="Check!" class="button {{mode}}">
+        </form>
+    </div>
+    <div>
+        <h2>Incomplete Items</h2>
+        <ul>
+            {% for todo in incomplete %}
+            <li>{{ todo.text }} <a href="{{ url_for('complete', id=todo.id) }}">&#x2713;</a></li>
+            {% endfor %}
+        </ul>
+        <h2>Completed Items</h2>
+        <ul>
+            {% for todo in complete %}
+            <li>{{ todo.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        Also, actual hostname is {{ hostname }}
+    </footer>
+</body>
+
+</html>
+-->
