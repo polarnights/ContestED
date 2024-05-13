@@ -1,0 +1,138 @@
+{
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Host": "d5db9l2mvbtc273gdgdm.apigw.yandexcloud.net",
+        "Priority": "u=0, i",
+        "Sec-Ch-Ua": ""Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform": ""macOS"",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Uber-Trace-Id": "7c3a165c236836e1:1081f3624b5fbcfd:b8a2c3d5f77916ba:1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        "X-Api-Gateway-Function-Id": "d4edkd0iraaqc0kd6vvr",
+        "X-Envoy-External-Address": "89.22.52.64",
+        "X-Envoy-Original-Path": "/status?task_id=12345",
+        "X-Forwarded-For": "89.22.52.64",
+        "X-Forwarded-Proto": "https",
+        "X-Real-Remote-Address": "89.22.52.64:6202",
+        "X-Request-Id": "2f2fbb72-e43e-497b-8a79-2700f3910142",
+        "X-Serverless-Certificate-Ids": "{}",
+        "X-Serverless-Gateway-Id": "d5db9l2mvbtc273gdgdm",
+        "X-Trace-Id": "6eabead7-f15c-423b-ba03-fca5c14eb7c3"
+    },
+    "url": "/status?task_id=12345",
+    "params": {
+        "task_id": "12345"
+    },
+    "multiValueParams": {
+        "task_id": [
+            "12345"
+        ]
+    },
+    "pathParams": {},
+    "multiValueHeaders": {
+        "Accept": [
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br, zstd"
+        ],
+        "Accept-Language": [
+            "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+        ],
+        "Host": [
+            "d5db9l2mvbtc273gdgdm.apigw.yandexcloud.net"
+        ],
+        "Priority": [
+            "u=0, i"
+        ],
+        "Sec-Ch-Ua": [
+            ""Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24""
+        ],
+        "Sec-Ch-Ua-Mobile": [
+            "?0"
+        ],
+        "Sec-Ch-Ua-Platform": [
+            ""macOS""
+        ],
+        "Sec-Fetch-Dest": [
+            "document"
+        ],
+        "Sec-Fetch-Mode": [
+            "navigate"
+        ],
+        "Sec-Fetch-Site": [
+            "none"
+        ],
+        "Sec-Fetch-User": [
+            "?1"
+        ],
+        "Uber-Trace-Id": [
+            "7c3a165c236836e1:1081f3624b5fbcfd:b8a2c3d5f77916ba:1"
+        ],
+        "Upgrade-Insecure-Requests": [
+            "1"
+        ],
+        "User-Agent": [
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+        ],
+        "X-Api-Gateway-Function-Id": [
+            "d4edkd0iraaqc0kd6vvr"
+        ],
+        "X-Envoy-External-Address": [
+            "89.22.52.64"
+        ],
+        "X-Envoy-Original-Path": [
+            "/status?task_id=12345"
+        ],
+        "X-Forwarded-For": [
+            "89.22.52.64"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ],
+        "X-Real-Remote-Address": [
+            "89.22.52.64:6202"
+        ],
+        "X-Request-Id": [
+            "2f2fbb72-e43e-497b-8a79-2700f3910142"
+        ],
+        "X-Serverless-Certificate-Ids": [
+            "{}"
+        ],
+        "X-Serverless-Gateway-Id": [
+            "d5db9l2mvbtc273gdgdm"
+        ],
+        "X-Trace-Id": [
+            "6eabead7-f15c-423b-ba03-fca5c14eb7c3"
+        ]
+    },
+    "queryStringParameters": {
+        "task_id": "12345"
+    },
+    "multiValueQueryStringParameters": {
+        "task_id": [
+            "12345"
+        ]
+    },
+    "requestContext": {
+        "identity": {
+            "sourceIp": "89.22.52.64",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+        },
+        "httpMethod": "GET",
+        "requestId": "2f2fbb72-e43e-497b-8a79-2700f3910142",
+        "requestTime": "25/May/2024:20:27:18 +0000",
+        "requestTimeEpoch": 1716668838
+    },
+    "body": "",
+    "isBase64Encoded": True,
+    "path": "/status"
+}

@@ -1,0 +1,1 @@
+curl "https://d5db9l2mvbtc273gdgdm.apigw.yandexcloud.net/info"

@@ -1,0 +1,14 @@
+{
+    "task_id": "b0e6c50b-e5f9-49a8-b974-dde0f9a5f86e",
+    "upload_here": {
+        "url": "https://storage.yandexcloud.net/hw6-for-upload",
+        "fields": {
+            "key": "cdfc7e27-ad7d-4995-aa51-c58309d5cf7b_the_scream.jpg",
+            "x-amz-algorithm": "AWS4-HMAC-SHA256",
+            "x-amz-credential": "YCAJEcjRxDYufDeMtb_43T8H0/20240315/ru-central1/s3/aws4_request",
+            "x-amz-date": "20240315T152204Z",
+            "policy": "eyJleHBpcmF0aW9uIjogIjIwMjQtMDMtMTVUMTU6MjM6NDRaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiaHc2LWZvci11cGxvYWQifSwgeyJrZXkiOiAiY2RmYzdlMjctYWQ3ZC00OTk1LWFhNTEtYzU4MzA5ZDVjZjdiX3RoZV9zY3JlYW0uanBnIn0sIHsieC1hbXotYWxnb3JpdGhtIjogIkFXUzQtSE1BQy1TSEEyNTYifSwgeyJ4LWFtei1jcmVkZW50aWFsIjogIllDQUpFY2pSeERZdWZEZU10Yl80M1Q4SDAvMjAyNDAzMTUvcnUtY2VudHJhbDEvczMvYXdzNF9yZXF1ZXN0In0sIHsieC1hbXotZGF0ZSI6ICIyMDI0MDMxNVQxNTIyMDRaIn1dfQ==",
+            "x-amz-signature": "177b1a9e616fc1ce50f2fbdff22cf57688bf519ba59f8ff47a446810e680c1a4"
+        }
+    }
+}

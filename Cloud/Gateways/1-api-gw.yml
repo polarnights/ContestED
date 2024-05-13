@@ -1,0 +1,178 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Grading API
+servers:
+- url: https://d5dngjlfv3ul26ir59gd.apigw.yandexcloud.net
+paths:
+  /{file+}:
+    options:
+      parameters:
+        - name: file
+          in: path
+          description: Params
+          required: false
+          schema:
+            type: string
+      description: Greedy options
+      operationId: greedyOptions
+      x-yc-apigateway-integration:
+        type: dummy
+        http_code: 200
+        content:
+          "*": ""
+        http_headers:
+          Allow: OPTIONS, GET, HEAD, POST
+          Access-Control-Allow-Origin: '*'
+          Access-Control-Allow-Headers: Content-Type, Authorization
+  /status:
+    get:
+      summary: gettaskstatus
+      operationId: gettaskstatus
+      parameters:
+        #- name: action
+        #  in: query
+        #  description: Action to perform
+        #  required: true
+        #  schema:
+        #    type: string
+        - name: task_id
+          in: query
+          description: Action to perform
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            'application/json':
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                nullable: true
+                additionalProperties: false
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      #x-yc-apigateway-integration:
+      # type: serverless_containers
+      #  container_id: ${MOVIES_API_CONTAINER_ID}
+      #x-yc-apigateway-integration:
+      #  type: cloud_functions
+      #  function_id: d4e1tpteti15him8bou9
+      #  tag: "$latest"
+      #  service_account_id: aje92i6b5tim83etjvun
+  /check_disk:
+    get:
+      summary: Check solution for a task with upload from Ya.Disk
+      operationId: checkone
+      parameters:
+        - name: action
+          in: query
+          description: Action to perform
+          required: true
+          schema:
+            type: string
+        - name: src_url
+          in: query
+          description: Source URL
+          required: true
+          schema:
+            type: string
+            format: uri
+        - name: course
+          in: query
+          description: Course
+          required: true
+          schema:
+            type: string
+        - name: language
+          in: query
+          description: Language
+          required: true
+          schema:
+            type: string
+        - name: task_n
+          in: query
+          description: Task number
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Check from Ya.Disk results
+          content:
+            'application/json':
+              schema:
+                type: object
+                properties:
+                  task_id:
+                    type: string
+                    description: Task_ID
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e1tpteti15him8bou9
+        tag: "$latest"
+        service_account_id: aje92i6b5tim83etjvun
+  /check_post:
+    get:
+      summary: Check solution for a task with upload from presigned URL
+      operationId: checktwo
+      parameters:
+        - name: action
+          in: query
+          description: Action to perform
+          required: true
+          schema:
+            type: string
+        - name: course
+          in: query
+          description: Course
+          required: true
+          schema:
+            type: string
+        - name: language
+          in: query
+          description: Language
+          required: true
+          schema:
+            type: string
+        - name: task_n
+          in: query
+          description: Task number
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          'application/json':
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+                model:
+                  type: string
+      responses:
+        '200':
+          description: Check from Presigned URL results
+          content:
+            'application/json':
+              schema:
+                type: object
+                properties:
+                  task_id:
+                    type: string
+                    description:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e1tpteti15him8bou9
+        tag: "$latest"
+        service_account_id: aje92i6b5tim83etjvun

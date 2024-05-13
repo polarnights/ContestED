@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+    color: #4CAF50;
+}
+
+h1 span {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+.form-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-element label {
+    text-align: left;
+    padding-right: 10px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    width: 200px;
+}
+
+.form-element input[type="text"],
+.form-element select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 210px);
+    box-sizing: border-box;
+}
+
+label {
+    text-align: left;
+    padding-right: 10px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #4CAF50;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+}
+
+button[type="button"]:hover {
+    background-color: #3e8e41;
+}
+
+.result,
+.status-result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.result pre,
+.status-result pre {
+    font-family: monospace;
+    font-size: 14px;
+    white-space: pre;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: #3e8e41;
+}

@@ -1,0 +1,5 @@
+boto3==1.34.59
+requests==2.31.0
+setuptools==68.2.2
+yandex==0.0.2
+yandexcloud==0.263.0

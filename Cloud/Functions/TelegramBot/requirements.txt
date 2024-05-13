@@ -1,0 +1,6 @@
+requests==2.31.0
+boto3==1.28.78
+botocore==1.31.78
+yandex==0.0.2
+yandexcloud==0.283.0
+ydb
